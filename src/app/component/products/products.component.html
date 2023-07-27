@@ -1,0 +1,76 @@
+<app-header></app-header>
+<!--navbar below card-->
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+         <a >
+            <img src="https://rukminim2.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100" alt="Mobiles">
+            <h6>Mobiles</h6>
+         </a>
+        </div>
+        <div class="item">
+            <a>
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/128/128/image/0d75b34f7d8fbcb3.png?q=100" alt="Fashion">
+                <h6>Fashion</h6>
+             </a>
+            
+        </div>
+        <div class="item">
+
+            <a>
+                <img src="https://rukminim2.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100" alt="Travel">
+                <h6>Travel</h6>
+             </a>
+            
+        </div>
+        <div class="item">
+
+            <a>
+                <img src="https://rukminim2.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="Electronics">
+                <h6>Electronics</h6>
+             </a>
+            
+        </div>
+
+        <div class="item">
+
+            <a>
+                <img src="https://rukminim2.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="Top Offer">
+                <h6>Top Offers</h6>
+             </a>
+            
+        </div>
+
+        <div class="item">
+            <a >
+                <img src="https://rukminim2.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" alt="Grocery">
+            </a>
+            <h6>Grocery</h6>
+        </div>
+
+        <div class="item">
+            <a>
+                <img  style="width: 62px; margin-top:5px;"    src="https://rukminim2.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100" alt="Beauty,Toys & More">
+            </a>
+            <h6>Beauty,Toys & More</h6>
+        </div>
+
+    </div>
+</div>
+
+<!--All products-->
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="all products">
+                <h5 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch;">{{item.title}}</h5>
+                <p style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch;">{{item.description}}</p>
+                <p> <strong>Price:</strong>${{item.price}}</p>
+                <button class="btn btn-primary" (click)="addtocart(item)"> Add to cart</button>
+            </div>
+        </ng-container>
+        
+    </div>
+</div>
