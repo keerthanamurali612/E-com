@@ -27,7 +27,7 @@
 }
 
 .item h6:hover{
-    color: blue;
+    color: #26B67A;
 }
 
 /* container*/
@@ -46,4 +46,16 @@
 .card img:hover{
     transition: 0.3s ease-in-out;
     transform: scale(1.1);
+}
+
+
+
+/* rating*/
+.rating {
+    margin: 10px;
+    padding: 5px;
+    border-top: 10px;
+}
+.rating i{
+    color: #26B67A;
 }

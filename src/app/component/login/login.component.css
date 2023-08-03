@@ -1,0 +1,37 @@
+.container{
+    background-color: #26B67A;
+    color: #fff;
+    padding: 40px 33px;
+    font-size: 18px;
+    margin: 20px auto 0;
+    width: 700px;
+    position: flex;
+    border-radius: 5px;
+   
+}
+
+  
+  .login-sec{  
+    position:relative;
+    
+}
+  .login-sec h2{ 
+    font-weight:800; 
+    font-size:30px;
+ }
+  .login-sec h2:after{
+      content:" ";
+      width:100px;
+      height:5px;  
+      display:block; 
+      margin-top:20px;
+      border-radius:3px;
+      margin-left:auto;
+      margin-right:auto
+    }
+  .btn-login{
+    background: #fff; 
+    color:black;
+    font-weight:600;
+    margin-top:30px;
+    }

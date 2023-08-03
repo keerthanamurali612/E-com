@@ -2,10 +2,10 @@
     <div class="navbar navbar-dark bg-white shadow-sm">
        <div class="navbar-brand align-item-center d-flex">
        
-        <strong style="font-size: 30px; color:black"> <span style="color: red;"> U</span>ni<span style="color: red;">Q</span>ue</strong>
+        <strong style="font-size: 30px; color:black"> <span style="color: #26B67A;"> U</span>ni<span style="color: #26B67A;">Q</span>ue</strong>
 
         <div class="form-group">
-            <input type="text"  class="form-control" placeholder="Search for products, brands and more">
+            <input type="text"  class="form-control" [(ngModel)]="searchTerm"(keyup)="search($event)"   placeholder="Search for products, brands and more">
         </div>
 
         <span class="fas fa-search search-icon"></span>
@@ -17,10 +17,57 @@
              <strong> Cart</strong>
         
        
-        <div  style="font-size: 10px;"    class="badge bg-danger">{{totalItem}}</div>
+        <div  style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
        </button>
-
        
+       <!--dropdown list-->  
+          
+            <div class="dropdown">
+              <button    class="btn btn-light " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-user"></i>
+                  <span> More </span>  
+              </button> 
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">
+                  <i class="fa-regular fa-user"></i>
+                  <span> My Profile </span> 
+                </a></li>
+                <li><a class="dropdown-item" href="#">
+                  <i class="fa-regular fa-heart"></i>
+                  <span> Wishlist </span>
+                </a></li>
+                <li><a class="dropdown-item" href="#">
+                  <i class="fa-solid fa-gift"></i>
+                  <span> Gift Cards </span>
+                </a></li>
+                <li><a class="dropdown-item" href="#">
+                  <i class="fa-solid fa-tag"></i>
+                  <span> Rewards </span>
+                </a></li>         
+              </ul>
+          </div> 
+
+        <!--Login-->
+         <ng-container *ngIf="this.auth.isAuthenticated();then authenticated;else notAuthenticated">
+
+         </ng-container>
+        <ul class="navbar">
+          <ng-template #notAuthenticated>
+            <li class="nav-item"><a href="javascript:void(0);" routerLink="/register"  class="nav-link" >Register</a></li>
+            <li><a class="nav-link" href="javascript:void(0);" routerLink="/login" >Login</a></li>
+          </ng-template>
+
+          <ng-template #authenticated>  
+            <li><a class="nav-link" > 
+              <i class="fa-solid fa-user"></i>
+              <p  class="text-bold " style=" margin-top: 0;
+              margin-bottom: 0rem;" [innerText]="this.user.displayName"></p>
+            </a></li>
+            <li><a class="nav-link"  (click)="logout()">Logout</a></li>
+          </ng-template>
+         
+        </ul>
+   
        
        
     </div>

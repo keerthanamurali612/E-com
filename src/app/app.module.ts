@@ -8,12 +8,19 @@ import { CartComponent } from './component/cart/cart.component';
 import { ProductsComponent } from './component/products/products.component';
 import { RouterModule ,Routes} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './component/login/login.component';
+import { RegisterComponent } from './component/register/register.component';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './shared/filter.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 const routes:Routes =[
   {path:'',component:HeaderComponent},
   {path:'products' ,component:ProductsComponent},
-  {path:'cart',component:CartComponent}
+  {path:'cart',component:CartComponent},
+  {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent}
 ]
 
 
@@ -22,13 +29,18 @@ const routes:Routes =[
     AppComponent,
     HeaderComponent,
     CartComponent,
-    ProductsComponent
+    ProductsComponent,
+    LoginComponent,
+    RegisterComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
 
 
   ],

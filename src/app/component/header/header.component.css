@@ -24,3 +24,80 @@
 
 }
 
+.seller ._1krdK5{
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    right:30%;
+}
+
+
+
+/*dropdown*/
+.dropdown{
+    right:2%;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:5px;
+  
+    
+}
+
+.dropdown button{
+    text-decoration: none;
+    border-radius: 10px;
+    font-size:15px;
+    font-weight: 300;
+}
+
+.dropdown button:hover{
+    background-color: #26B67A;
+    color:white;
+
+}
+
+.dropdown-menu{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.dropdown-menu :hover{
+    background-color: #26B67A;
+    color: black;
+}
+
+._2Udqwk {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+span{
+    color:black;
+}
+._1Mikcj{
+    color: blue;
+
+}
+
+.navbar{
+    text-decoration: none;
+    list-style-type: none;
+   justify-content: space-between;
+   
+}
+
+.nav-link{
+    color: #000;
+    display: flex;
+    font-weight: 600;                     
+}
+
+.nav-link:hover{
+    background-color: #26B67A;
+    border-radius: 8px;
+}
+

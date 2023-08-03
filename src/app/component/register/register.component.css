@@ -1,0 +1,20 @@
+.container{
+    background-color: #26B67A;
+    color: #fff;
+    padding: 40px 33px;
+    font-size: 18px;
+    margin: 20px auto 0;
+    width: 700px;
+    position: flex;
+    border-radius: 5px;
+   
+}
+
+
+.btn-login{
+    background: #fff; 
+    color:black;
+    font-weight:600;  
+    margin-top:25px;  
+    cursor: pointer;
+}
