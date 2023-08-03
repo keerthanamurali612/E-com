@@ -36,7 +36,7 @@ export class AuthService {
     //send data to register api(firebase)
       return this.http.
       post<{idToken:string}>(
-        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCcLIZHX4p-qliEx8BKya4EOWURPppkVic',
+        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[]',
      {displayName:name,email,password}
     );
 
@@ -53,7 +53,7 @@ export class AuthService {
   //send data to login api(firebase)
    return this.http.
   post<{idToken:string}>(
-    '  https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCcLIZHX4p-qliEx8BKya4EOWURPppkVic',
+    '  https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[]',
     {email,password}
   );
 
@@ -63,7 +63,7 @@ export class AuthService {
     let token=sessionStorage.getItem('token');
 
     return this.http.post<{users:Array<{localId:string,displayName:string}>}>(
-      'https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyCcLIZHX4p-qliEx8BKya4EOWURPppkVic',
+      'https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=[]',
       {idToken:token}
     );
   }
